@@ -3,6 +3,8 @@ import express from 'express'
 import cors from 'cors'
 import { createClient } from '@supabase/supabase-js'
 
+console.log('Node.js version:', process.version);
+
 const app = express()
 const port = process.env.PORT || 5000
 
