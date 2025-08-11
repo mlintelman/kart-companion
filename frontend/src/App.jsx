@@ -5,6 +5,7 @@ import VS from "./pages/VS";
 import Knockout from "./pages/Knockout";
 import GrandPrix from "./pages/GrandPrix";
 import Stats from "./pages/Stats";
+import TestApi from "./pages/TestApi";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/knockout" element={<Knockout />} />
           <Route path="/grandprix" element={<GrandPrix />} />
           <Route path="/stats" element={<Stats />} />
+          <Route path="/testapi" element={<TestApi/>} />
         </Route>
       </Routes>
     </Router>

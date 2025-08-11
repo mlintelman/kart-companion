@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { locations } from "../data/data";
 
+
+
 export default function VS() {
+
     const [numRaces, setNumRaces] = useState("");
     const [randomizedLocations, setRandomizedLocations] = useState([])
 
@@ -64,7 +67,7 @@ export default function VS() {
 
             {/* VS Race results */}
             <div>
-                
+
             </div>
         </div>
     );
