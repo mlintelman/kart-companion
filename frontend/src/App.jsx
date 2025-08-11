@@ -12,7 +12,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<TestApi />} />
+          <Route index element={<Home />} />
           <Route path="/vs" element={<VS />} />
           <Route path="/knockout" element={<Knockout />} />
           <Route path="/grandprix" element={<GrandPrix />} />

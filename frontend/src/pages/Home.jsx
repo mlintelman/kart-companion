@@ -1,5 +1,10 @@
+import TestApi from "./TestApi"
+
 export default function Home() {
     return (
-        <p>Home</p>
+        <div>
+            <h2>Home</h2>
+            <TestApi/>
+        </div>
     )
 }

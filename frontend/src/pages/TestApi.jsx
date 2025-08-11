@@ -5,7 +5,6 @@ export default function TestApi() {
   const [error, setError] = useState(null);
   useEffect(() => {
     const apiUrl = import.meta.env.VITE_API_URL
-
     fetch(`${apiUrl}/users`)
       .then((res) => {
         if (!res.ok) throw new Error('Network response was not ok')
@@ -22,7 +21,7 @@ export default function TestApi() {
       <h2>Users from Backend:</h2>
       <ul>
         {users.map((user) => (
-          <li key={user.id}>{user.name}</li>
+          <li key={user.id}>{user.username}</li>
         ))}
       </ul>
     </div>
