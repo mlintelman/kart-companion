@@ -15,6 +15,11 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 )
 
+app.get('/test', (req, res) => {
+  res.json({ message: 'API is working' });
+});
+
+
 app.get('/users', async (req, res) => {
   try {
     const { data, error } = await supabase.from('users').select('*')
