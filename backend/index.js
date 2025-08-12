@@ -31,6 +31,11 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 )
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Backend is running' })
+})
+
+
 app.get('/test', (req, res) => {
   res.json({ message: 'API is working' })
 })

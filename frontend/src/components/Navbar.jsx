@@ -2,11 +2,11 @@ import { useState } from "react"
 import { NavLink } from "react-router-dom"
 
 const navItems = [
-  { to: "/", label: "Home", img: "/images/home.png" },
+  { to: "/", label: "Home", img: "/images/vs.png" },
   { to: "/grandprix", label: "Grand Prix", img: "/images/grandprix.png" },
   { to: "/knockout", label: "Knockout Tour", img: "/images/knockout.png" },
   { to: "/vs", label: "VS Race", img: "/images/vs.png" },
-  { to: "/stats", label: "Stats", img: "/images/stats.png" },
+  { to: "/stats", label: "Stats", img: "/images/vs.png" },
 ]
 
 export default function Navbar() {
