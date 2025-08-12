@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 export default function TestApi() {
   const [users, setUsers] = useState([])
   const [error, setError] = useState(null);
+  
   useEffect(() => {
     const apiUrl = import.meta.env.VITE_API_URL
     fetch(`${apiUrl}/users`)
