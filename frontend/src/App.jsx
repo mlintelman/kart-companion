@@ -5,7 +5,6 @@ import VS from "./pages/VS";
 import Knockout from "./pages/Knockout";
 import GrandPrix from "./pages/GrandPrix";
 import Stats from "./pages/Stats";
-import TestApi from "./pages/TestApi";
 
 export default function App() {
   return (

@@ -2,21 +2,21 @@ import { useState } from "react"
 import { NavLink } from "react-router-dom"
 
 const navItems = [
-  { to: "/", label: "Home", img: "/images/vs.png" },
-  { to: "/grandprix", label: "Grand Prix", img: "/images/grandprix.png" },
-  { to: "/knockout", label: "Knockout Tour", img: "/images/knockout.png" },
-  { to: "/vs", label: "VS Race", img: "/images/vs.png" },
-  { to: "/stats", label: "Stats", img: "/images/vs.png" },
+  { to: "/", label: "Home" },
+  { to: "/grandprix", label: "Grand Prix" },
+  { to: "/knockout", label: "Knockout Tour" },
+  { to: "/vs", label: "VS Race" },
+  { to: "/stats", label: "Stats" },
 ]
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <nav className="p-4">
+    <nav className="p-4 space-y-2">
       {/* Mobile header with hamburger */}
       <div className="flex justify-between items-center md:hidden">
-        <div className="text-4xl font-bold text-gray-700">Kart Companion</div>
+        <div className="text-4xl font-bold text-gray-50">Kart Companion</div>
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
@@ -36,15 +36,14 @@ export default function Navbar() {
           menuOpen ? "block" : "hidden"
         } md:block`}
       >
-        {navItems.map(({ to, label, img }) => (
+        {navItems.map(({ to, label }) => (
           <li key={to} className="mb-4 md:mb-0">
             <NavLink
               to={to}
-              className="group flex flex-row md:flex-col items-center hover:bg-gray-200 focus:outline-none"
+              className="group flex flex-row md:flex-col items-center hover:bg-red-600 md:p-4 rounded-2xl focus:outline-none"
               onClick={() => setMenuOpen(false)} // close menu on mobile link click
             >
-              <img src={img} alt={label} className="w-10 h-10 object-contain" />
-              <span className="m-1 font-semibold text-l md:text-xs text-gray-700 opacity-100 transition-opacity">
+              <span className="font-semibold text-gray-50 text-xl opacity-100 transition-opacity">
                 {label}
               </span>
             </NavLink>
