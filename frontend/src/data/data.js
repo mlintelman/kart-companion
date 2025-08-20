@@ -1,13 +1,24 @@
-/*export const cups = [
-    { id: "mushroomCup", name: "Mushroom Cup", image: "" },
-    { id: "flowerCup", name: "Flower Cup", image: "" },
-    { id: "starCup", name: "Star Cup", image: "" },
-    { id: "shellCup", name: "Shell Cup", image: "" },
-    { id: "bananaCup", name: "Banana Cup", image: "" },
-    { id: "leafCup", name: "Leaf Cup", image: "" },
-    { id: "lightningCup", name: "Lightning Cup", image: "" },
-    { id: "specialCup", name: "Special Cup", image: "" }
-]*/
+export const cups = [
+  { id: 1, name: "Mushroom Cup", image: "" },
+  { id: 2, name: "Flower Cup", image: "" },
+  { id: 3, name: "Star Cup", image: "" },
+  { id: 4, name: "Shell Cup", image: "" },
+  { id: 5, name: "Banana Cup", image: "" },
+  { id: 6, name: "Leaf Cup", image: "" },
+  { id: 7, name: "Lightning Cup", image: "" },
+  { id: 8, name: "Special Cup", image: "" }
+]
+
+export const rallies = [
+  { id: 1, name: "Golden Rally", image: "" },
+  { id: 2, name: "Ice Rally", image: "" },
+  { id: 3, name: "Moon Rally", image: "" },
+  { id: 4, name: "Spiny Rally", image: "" },
+  { id: 5, name: "Cherry Rally", image: "" },
+  { id: 6, name: "Acorn Rally", image: "" },
+  { id: 7, name: "Cloud Rally", image: "" },
+  { id: 8, name: "Heart Rally", image: "" }
+]
 
 // Each of the locations in Mario Kart World. You may either race a location as a traditional course, or chain 2 neighboring locations and race from one to the other.
 export const locations = [
