@@ -3,7 +3,7 @@ import { AuthContext } from "../contexts/AuthContext"
 import React, { useContext} from 'react'
 
 export default function Home() {
-    const { user, profile, loading } = useContext(AuthContext)
+    const { profile } = useContext(AuthContext)
 
     //return <h1>Welcome, {user ? user.email: ""}</h1>
     async function signOutUser() {
@@ -19,7 +19,7 @@ export default function Home() {
 
     return(
         <div>
-            <h1>Welcome, {user ? user.email: ""}</h1>
+            <h1>Welcome, {profile ? profile.display_name: ""}</h1>
             <button className="text-xl bg-blue-500 text-white cursor-pointer rounded-md pl-2 pr-2 pt-1 pb-1" onClick={() => signOutUser()}>Logout</button>
         </div>
     )

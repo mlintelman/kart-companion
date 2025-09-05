@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { supabase } from "../supabaseClient";
 
 export default function PlayerSelect({ numPlayers, players, setPlayers }) {
-  const [options, setOptions] = useState([]);
+  const [options, setOptions] = useState([])
   //const [players, setPlayers] = useState({}); // { 1: { name: "", place: "" }, 2: {...} }
 
-  useEffect(() => {
+  /*useEffect(() => {
     const apiUrl = import.meta.env.VITE_API_URL;
     fetch(`${apiUrl}/users`)
       .then((res) => {
@@ -13,6 +14,17 @@ export default function PlayerSelect({ numPlayers, players, setPlayers }) {
       })
       .then((data) => setOptions(data))
       .catch((err) => console.error("error fetching options:", err))
+  }, [])*/
+
+  useEffect(() => {
+    async function fetchProfiles() {
+      const { data, error } = await supabase
+        .from("profile")
+        .select("*")
+      console.log(data)
+      setOptions(data)
+    }
+    fetchProfiles()
   }, [])
 
   const handleNameChange = (playerIndex, value) => {
@@ -43,12 +55,15 @@ export default function PlayerSelect({ numPlayers, players, setPlayers }) {
               value={players[playerNum]?.userId || ""}
               onChange={(e) => handleNameChange(playerNum, e.target.value)}
             >
-              <option className="text-gray-500" value="">
+              <option className="text-gray-500" disabled value="">
                 Name
               </option>
+              <option  value={0} key={0}>
+                Guest
+              </option>
               {options.map((opt) => (
-                <option className="text-black" key={opt.id} value={opt.id}>
-                  {opt.username}
+                <option className="text-black" key={opt.user_id} value={opt.user_id}>
+                  {opt.display_name}
                 </option>
               ))}
             </select>
